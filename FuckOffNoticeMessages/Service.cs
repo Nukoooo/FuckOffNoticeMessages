@@ -1,9 +1,9 @@
-﻿using Dalamud.Game.Gui;
-using Dalamud.IoC;
+﻿using Dalamud.IoC;
+using Dalamud.Plugin.Services;
 
 namespace FuckOffNoticeMessages;
 
 internal class Service
 {
-    [PluginService] internal static ChatGui ChatGui { get; private set; } = null!;
+    [PluginService] internal static IChatGui ChatGui { get; private set; } = null!;
 }

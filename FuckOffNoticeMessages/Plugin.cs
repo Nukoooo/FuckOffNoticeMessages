@@ -1,21 +1,20 @@
 ﻿using System;
 using Dalamud.Game.Text;
 using Dalamud.Game.Text.SeStringHandling;
-using Dalamud.IoC;
 using Dalamud.Plugin;
 
 namespace FuckOffNoticeMessages;
 
 public class Plugin : IDalamudPlugin
 {
-    public Plugin([RequiredVersion("1.0")] DalamudPluginInterface pi)
+    public Plugin(IDalamudPluginInterface pi)
     {
         pi.Create<Service>();
 
         Service.ChatGui.ChatMessage += ChatGui_OnChatMessage;
     }
 
-    private void ChatGui_OnChatMessage(XivChatType type, uint senderid, ref SeString sender, ref SeString message, ref bool ishandled)
+    private void ChatGui_OnChatMessage(XivChatType type, int timestamp, ref SeString sender, ref SeString message, ref bool ishandled)
     {
         if (type != XivChatType.Notice)
             return;
