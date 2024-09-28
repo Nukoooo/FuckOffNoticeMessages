@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net8.0-windows8.0</TargetFramework>
 		<LangVersion>latest</LangVersion>
-		<Version>1.0.0.2</Version>
+		<Version>1.0.0.3</Version>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -16,7 +16,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DalamudPackager" Version="2.1.11" />
+		<PackageReference Include="DalamudPackager" Version="2.1.13" />
 	</ItemGroup>
 
 	<PropertyGroup>
